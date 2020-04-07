@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://Daniel123:Daniel123@dreamcatcher-laolw.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://Daniel123:Daniel123@dreamcatcher-laolw.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
