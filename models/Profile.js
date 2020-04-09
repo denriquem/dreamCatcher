@@ -23,6 +23,7 @@ const ProfileSchema = new mongoose.Schema({
   },
   skills: {
     type: [String],
+    required: true,
   },
   bio: {
     type: String,
@@ -37,9 +38,9 @@ const ProfileSchema = new mongoose.Schema({
     facebook: {
       type: String,
     },
-    instagram: {
-      type: String,
-    },
+    // instagram: {
+    //   type: String,
+    // },
   },
   date: {
     type: Date,
