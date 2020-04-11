@@ -261,7 +261,7 @@ router.post(
 // @desc   DELETE comment
 // @access Private
 
-router.delete("comment/:id/:comment_id", auth, async (req, res) => {
+router.delete("/comment/:id/:comment_id", auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
 
@@ -286,7 +286,7 @@ router.delete("comment/:id/:comment_id", auth, async (req, res) => {
       .map((comment) => comment.user.toString())
       .indexOf(req.user.id);
 
-    post.comment.splice(removeIndex, 1);
+    post.comments.splice(removeIndex, 1);
 
     await post.save();
     res.json(post.comments);
