@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "jest-dom": "^4.0.0",
     "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -39,5 +39,13 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://loclahost:5000"
+  "proxy": "http://loclahost:5000",
+  "devDependencies": {
+    "@testing-library/react": "^9.5.0",
+    "@types/enzyme": "^3.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "react-scripts-ts": "^4.0.8",
+    "react-test-renderer": "^16.13.1"
+  }
 }
