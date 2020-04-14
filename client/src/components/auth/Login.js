@@ -21,8 +21,10 @@ export const Login = () => {
   };
 
   return (
-    <Fragment data-test="component-login">
-      <h1 className="large text-primary">Sign In</h1>
+    <Fragment>
+      <h1 className="large text-primary" data-test="component-login">
+        Sign In
+      </h1>
       <p className="lead">
         <i className="fas fa-user"></i> Sign in
       </p>

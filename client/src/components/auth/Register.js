@@ -6,18 +6,18 @@ export const Register = () => {
     name: "",
     email: "",
     password: "",
-    password2: "",
+    password2: ""
   });
 
   const { name, email, password, password2 } = formData;
 
-  const onChange = (e) =>
+  const onChange = e =>
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
       console.log("Passwords do not match");
@@ -28,18 +28,24 @@ export const Register = () => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
+      <h1 className="large text-primary" data-test="component-register">
+        Sign Up
+      </h1>
       <p className="lead">
         <i className="fas fa-user"></i> Create Your Account
       </p>
-      <form className="form" onSubmit={(e) => onSubmit(e)}>
+      <form
+        className="form"
+        onSubmit={e => onSubmit(e)}
+        data-test="signUp-form"
+      >
         <div className="form-group">
           <input
             type="text"
             placeholder="Name"
             name="name"
             value={name}
-            onChange={(e) => onChange(e)}
+            onChange={e => onChange(e)}
             required
           />
         </div>
@@ -49,7 +55,7 @@ export const Register = () => {
             placeholder="Email Address"
             name="email"
             value={email}
-            onChange={(e) => onChange(e)}
+            onChange={e => onChange(e)}
             required
           />
           <small className="form-text">
@@ -64,7 +70,7 @@ export const Register = () => {
             name="password"
             minLength="6"
             value={password}
-            onChange={(e) => onChange(e)}
+            onChange={e => onChange(e)}
           />
         </div>
         <div className="form-group">
@@ -74,10 +80,15 @@ export const Register = () => {
             name="password2"
             minLength="6"
             value={password2}
-            onChange={(e) => onChange(e)}
+            onChange={e => onChange(e)}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input
+          type="submit"
+          className="btn btn-primary"
+          value="Register"
+          data-test="submit-button"
+        />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>
