@@ -1,22 +1,22 @@
 import React from "react";
-import Landing from "./Landing";
-import Enzyme, { shallow } from "enzyme";
+import Navbar from "./Navbar";
+import Enzyme from "enzyme";
 import { setup, findByTestAttr } from "./../../testHelpers";
 import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });
 
 let wrapper;
-let landingComponent;
+let navbarComponent;
 
 beforeEach(() => {
-  wrapper = setup(Landing);
+  wrapper = setup(Navbar);
 });
 
-describe("Landing", () => {
+describe("Navbar", () => {
   it("should render without errors", () => {
-    landingComponent = findByTestAttr(wrapper, "component-landing");
-    expect(landingComponent).toHaveLength(1);
+    navbarComponent = findByTestAttr(wrapper, "component-navbar");
+    expect(navbarComponent).toHaveLength(1);
   });
 
   it("should render a register button", () => {
