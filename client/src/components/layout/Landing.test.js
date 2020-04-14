@@ -1,21 +1,30 @@
 import React from "react";
 import Landing from "./Landing";
 import Enzyme from "enzyme";
-
+import { setup, findByTestAttr } from "./../../testHelpers";
 import Adapter from "enzyme-adapter-react-16";
-
-import { shallow } from "enzyme";
-
 Enzyme.configure({ adapter: new Adapter() });
 
-const setUp = (Component, props = {}) => {
-  const component = shallow(<Component {...props} />);
-  return component;
-};
+let wrapper;
+let landingComponent;
+
+beforeEach(() => {
+  wrapper = setup(Landing);
+});
 
 describe("Landing", () => {
   it("should render without errors", () => {
-    const wrapper = setUp(Landing, {});
+    landingComponent = findByTestAttr(wrapper, "component-landing");
     expect(wrapper).toHaveLength(1);
+  });
+
+  it("should render a register button", () => {
+    const registerButton = findByTestAttr(wrapper, "register-button");
+    expect(registerButton).toHaveLength(1);
+  });
+
+  it("should render a login button", () => {
+    const loginButton = findByTestAttr(wrapper, "login-button");
+    expect(loginButton).toHaveLength(1);
   });
 });
