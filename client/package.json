@@ -13,10 +13,11 @@
     "react-moment": "^0.9.7",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
+    "react-scripts": "3.4.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "uuid": "^7.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,13 +40,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://loclahost:5000",
-  "devDependencies": {
-    "@testing-library/react": "^9.5.0",
-    "@types/enzyme": "^3.1.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "react-scripts-ts": "^4.0.8",
-    "react-test-renderer": "^16.13.1"
-  }
+
+  "proxy": "http://localhost:5000"
+
 }

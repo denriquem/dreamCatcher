@@ -1,7 +1,11 @@
 import React, { Fragment, useState } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { setAlert } from "../../actions/alert";
+import { register } from "../../actions/auth";
+import PropTypes from "prop-types";
 
-export const Register = () => {
+export const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,12 +21,15 @@ export const Register = () => {
       [e.target.name]: e.target.value
     });
 
-  const onSubmit = async e => {
+
+  const onSubmit = async (e) => {
+    console.log("Hello!?");
+
     e.preventDefault();
     if (password !== password2) {
-      console.log("Passwords do not match");
+      setAlert("Passwords do not match", "danger");
     } else {
-      console.log("SUCCESS");
+      register({ name, email, password });
     }
   };
 
@@ -45,8 +52,9 @@ export const Register = () => {
             placeholder="Name"
             name="name"
             value={name}
-            onChange={e => onChange(e)}
-            required
+
+            onChange={(e) => onChange(e)}
+
           />
         </div>
         <div className="form-group">
@@ -55,8 +63,8 @@ export const Register = () => {
             placeholder="Email Address"
             name="email"
             value={email}
-            onChange={e => onChange(e)}
-            required
+            onChange={(e) => onChange(e)}
+
           />
           <small className="form-text">
             This site uses Gravatar so if you want a profile image, use a
@@ -97,4 +105,9 @@ export const Register = () => {
   );
 };
 
-export default Register;
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
+};
+
+export default connect(null, { setAlert, register })(Register);
