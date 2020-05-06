@@ -10,19 +10,21 @@ export const Register = ({ setAlert, register }) => {
     name: "",
     email: "",
     password: "",
-    password2: "",
+    password2: ""
   });
 
   const { name, email, password, password2 } = formData;
 
-  const onChange = (e) =>
+  const onChange = e =>
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
+
 
   const onSubmit = async (e) => {
     console.log("Hello!?");
+
     e.preventDefault();
     if (password !== password2) {
       setAlert("Passwords do not match", "danger");
@@ -33,18 +35,26 @@ export const Register = ({ setAlert, register }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
+      <h1 className="large text-primary" data-test="component-register">
+        Sign Up
+      </h1>
       <p className="lead">
         <i className="fas fa-user"></i> Create Your Account
       </p>
-      <form className="form" onSubmit={(e) => onSubmit(e)}>
+      <form
+        className="form"
+        onSubmit={e => onSubmit(e)}
+        data-test="signUp-form"
+      >
         <div className="form-group">
           <input
             type="text"
             placeholder="Name"
             name="name"
             value={name}
+
             onChange={(e) => onChange(e)}
+
           />
         </div>
         <div className="form-group">
@@ -54,6 +64,7 @@ export const Register = ({ setAlert, register }) => {
             name="email"
             value={email}
             onChange={(e) => onChange(e)}
+
           />
           <small className="form-text">
             This site uses Gravatar so if you want a profile image, use a
@@ -67,7 +78,7 @@ export const Register = ({ setAlert, register }) => {
             name="password"
             minLength="6"
             value={password}
-            onChange={(e) => onChange(e)}
+            onChange={e => onChange(e)}
           />
         </div>
         <div className="form-group">
@@ -77,10 +88,15 @@ export const Register = ({ setAlert, register }) => {
             name="password2"
             minLength="6"
             value={password2}
-            onChange={(e) => onChange(e)}
+            onChange={e => onChange(e)}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input
+          type="submit"
+          className="btn btn-primary"
+          value="Register"
+          data-test="submit-button"
+        />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>
