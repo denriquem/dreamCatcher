@@ -1,9 +1,8 @@
+import React from "react";
 import Login from "./Login";
-import Enzyme from "enzyme";
+import { shallow } from "enzyme";
 import { setup, findByTestAttr } from "./../../testHelpers";
 import Adapter from "enzyme-adapter-react-16";
-
-Enzyme.configure({ adapter: new Adapter() });
 
 let wrapper;
 let loginComponent;

@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Enzyme from "enzyme";
+import { Navbar } from "./Navbar";
+import Enzyme, { shallow } from "enzyme";
 import { setup, findByTestAttr } from "./../../testHelpers";
 import Adapter from "enzyme-adapter-react-16";
 
