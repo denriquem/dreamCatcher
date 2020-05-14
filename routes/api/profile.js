@@ -57,7 +57,7 @@ router.post(
     } = req.body;
 
     //Build profile object
-    const profileFields = {};
+    let profileFields = {};
     profileFields.user = req.user.id;
     if (planet) profileFields.planet = planet;
     if (dreamAnimal) profileFields.dreamAnimal = dreamAnimal;
@@ -65,9 +65,12 @@ router.post(
     if (dreamMusic) profileFields.dreamMusic = dreamMusic;
     if (status) profileFields.status = status;
     if (bio) profileFields.bio = bio;
-    if (skills) {
-      profileFields.skills = skills.split(",").map((skill) => skill.trim());
-    }
+
+    profileFields = {
+      skills: Array.isArray(skills)
+        ? skills
+        : skills.split(",").map((skill) => " " + skill.trim()),
+    };
 
     // Build socail object
 
