@@ -32,10 +32,14 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link to="/profiles">Dreamers</Link>
       </li>
       <li>
-        <Link to="/register">Register</Link>
+        <Link to="/register" data-test="register-button">
+          Register
+        </Link>
       </li>
       <li>
-        <Link to="/login">Login</Link>
+        <Link to="/login" data-test="login-button">
+          Login
+        </Link>
       </li>
     </ul>
   );
