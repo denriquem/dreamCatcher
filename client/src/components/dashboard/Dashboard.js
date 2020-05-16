@@ -6,7 +6,7 @@ import Spinner from "../layout/Spinner";
 import { Link } from "react-router-dom";
 import DashboardActions from "./DashboardActions";
 
-const Dashboard = ({
+export const Dashboard = ({
   getCurrentProfile,
   auth: { user },
   profile: { profile, loading },
@@ -19,7 +19,9 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <Fragment>
-      <h1 className="large text-primary">Heading</h1>
+      <h1 className="large text-primary" data-test="component-dashboard">
+        Heading
+      </h1>
       <p className="lead">
         <i className="fas fa-user"></i> Welcome {user && user.name}
       </p>
@@ -30,7 +32,11 @@ const Dashboard = ({
       ) : (
         <Fragment>
           <p> You have not yet set up a profile, please add some info</p>
-          <Link to="/create-profile" className="btn btn-primary my-1">
+          <Link
+            to="/create-profile"
+            className="btn btn-primary my-1"
+            data-test="create-profile-button"
+          >
             Create Profile
           </Link>
         </Fragment>
