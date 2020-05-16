@@ -21,7 +21,7 @@ describe("Register", () => {
   });
 
   // it("should render a sign up form", () => {
-  //   const signUpForm = wrapper.find("div.form-group");
+  //   const signUpForm = wrapper.find("di");
   //   expect(signUpForm).toHaveLength(1);
   // });
 
