@@ -37,7 +37,9 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Sign Up</h1>
+      <h1 className="large text-primary" data-test="register-component">
+        Sign Up
+      </h1>
       <p className="lead">
         <i className="fas fa-user"></i> Create Your Account
       </p>
@@ -88,7 +90,12 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input type="submit" className="btn btn-primary" value="Register" />
+        <input
+          type="submit"
+          className="btn btn-primary"
+          value="Register"
+          data-test="submit"
+        />
       </form>
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>
