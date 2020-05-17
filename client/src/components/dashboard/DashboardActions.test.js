@@ -12,4 +12,9 @@ describe("DashboardActions", () => {
   it("succesfully renders dashboard actions", () => {
     expect(wrapper).toHaveLength(1);
   });
+
+  it("contains an edit profile button", () => {
+    const editButton = findByTestAttr(wrapper, "edit-button");
+    expect(editButton).toHaveLength(1);
+  });
 });

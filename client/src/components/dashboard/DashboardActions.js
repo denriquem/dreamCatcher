@@ -5,7 +5,7 @@ const DashboardActions = () => {
   return (
     <div>
       <div className="dash-buttons">
-        <Link to="/edit-profile" class="btn btn-light">
+        <Link data-test="edit-button" to="/edit-profile" class="btn btn-light">
           <i className="fas fa-user-circle text-primary"></i> Edit Profile
         </Link>
 
