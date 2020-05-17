@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { createProfile, getCurrentProfile } from "../../actions/profile";
 import { withRouter, Link } from "react-router-dom";
 
-const EditProfile = ({
+export const EditProfile = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
