@@ -1,27 +1,30 @@
 import React from "react";
+import Enzyme from "enzyme";
 import { Register } from "./Register";
-import { shallow } from "enzyme";
 import { findByTestAttr, setup } from "./../testHelpers";
+import Adapter from "enzyme-adapter-react-16";
+
+Enzyme.configure({ adapter: new Adapter() });
 
 let wrapper;
 
+beforeEach(() => {
+  const props = {
+    setAlert: jest.fn(),
+    register: jest.fn(),
+    isAuthenticated: true,
+  };
+
+  wrapper = setup(Register, props);
+});
+
 describe("Register", () => {
-  beforeEach(() => {
-    const props = {
-      setAlert: jest.fn(),
-      register: jest.fn(),
-      isAuthenticated: true,
-    };
-
-    wrapper = setup(Register, props);
-  });
-
   it("should render without errors", () => {
     expect(wrapper).toHaveLength(1);
   });
 
   // it("should render a sign up form", () => {
-  //   const signUpForm = wrapper.find("di");
+  //   const signUpForm = findByTestAttr(wrapper, "signup-form");
   //   expect(signUpForm).toHaveLength(1);
   // });
 

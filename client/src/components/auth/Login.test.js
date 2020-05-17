@@ -1,30 +1,34 @@
-// import Login from "./Login";
-// import Enzyme from "enzyme";
-// import { setup, findByTestAttr } from "./../../testHelpers";
-// import Adapter from "enzyme-adapter-react-16";
+import React from "react";
+import { Login } from "./Login";
+import { setup, findByTestAttr } from "./../testHelpers";
+import Adapter from "enzyme-adapter-react-16";
+import Enzyme from "enzyme";
 
-// Enzyme.configure({ adapter: new Adapter() });
+Enzyme.configure({ adapter: new Adapter() });
 
-// let wrapper;
-// let loginComponent;
+let wrapper;
 
-// beforeEach(() => {
-//   wrapper = setup(Login);
-// });
+beforeEach(() => {
+  const props = {
+    login: jest.fn(),
+    isAuthenticated: true,
+  };
 
-// describe("Login", () => {
-//   it("should render without errors", () => {
-//     loginComponent = findByTestAttr(wrapper, "component-login");
-//     expect(loginComponent).toHaveLength(1);
-//   });
+  wrapper = setup(Login, props);
+});
 
-//   it("should contain a log in form", () => {
-//     const loginForm = findByTestAttr(wrapper, "login-form");
-//     expect(loginForm).toHaveLength(1);
-//   });
+describe("Login", () => {
+  it("should render without errors", () => {
+    expect(wrapper).toHaveLength(1);
+  });
 
-//   it("should contain a submit button", () => {
-//     const submitButton = findByTestAttr(wrapper, "submit-button");
-//     expect(submitButton).toHaveLength(1);
-//   });
-// });
+  //   it("should contain a log in form", () => {
+  //     const loginForm = findByTestAttr(wrapper, "login-form");
+  //     expect(loginForm).toHaveLength(1);
+  //   });
+
+  //   it("should contain a submit button", () => {
+  //     const submitButton = findByTestAttr(wrapper, "submit-button");
+  //     expect(submitButton).toHaveLength(1);
+  //   });
+});

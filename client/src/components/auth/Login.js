@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { login } from "../../actions/auth";
 
-const Login = ({ login, isAuthenticated }) => {
+export const Login = ({ login, isAuthenticated }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -35,7 +35,7 @@ const Login = ({ login, isAuthenticated }) => {
         <i className="fas fa-user"></i> Sign in
       </p>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
-        <div className="form-group">
+        <div className="form-group" data-test="login-form">
           <input
             type="email"
             placeholder="Email Address"
