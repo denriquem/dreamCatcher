@@ -1,6 +1,5 @@
 import React from "react";
 import { Landing } from "./Landing";
-import Enzyme, { shallow } from "enzyme";
 import { setup, findByTestAttr } from "./../testHelpers";
 
 let wrapper;
@@ -16,8 +15,13 @@ describe("Landing", () => {
     expect(landingComponent).toHaveLength(1);
   });
 
-  it("should render a register and login buttons", () => {
-    const registerButton = wrapper.find("div.buttons");
+  it("should render a register button", () => {
+    const registerButton = findByTestAttr(wrapper, "register-button");
     expect(registerButton).toHaveLength(1);
+  });
+
+  it("should render a login button", () => {
+    const loginButton = findByTestAttr(wrapper, "login-button");
+    expect(loginButton).toHaveLength(1);
   });
 });

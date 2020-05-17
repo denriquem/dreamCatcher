@@ -15,10 +15,18 @@ export const Landing = ({ isAuthenticated }) => {
           <h1 className="x-large">DreamCatcher</h1>
           <p className="lead">Share and interpret your dreams</p>
           <div className="buttons">
-            <Link to="/register" className="btn btn-primary">
+            <Link
+              data-test="register-button"
+              to="/register"
+              className="btn btn-primary"
+            >
               Sign Up
             </Link>
-            <Link to="/login" className="btn btn-light">
+            <Link
+              data-test="login-button"
+              to="/login"
+              className="btn btn-light"
+            >
               Login
             </Link>
           </div>
