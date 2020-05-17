@@ -46,7 +46,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
       <form
         className="form"
         onSubmit={(e) => onSubmit(e)}
-        data-test="signUp-form"
+        data-test="signup-form"
       >
         <div className="form-group">
           <input
