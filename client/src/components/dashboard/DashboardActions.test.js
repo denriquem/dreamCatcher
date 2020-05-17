@@ -20,5 +20,6 @@ describe("DashboardActions", () => {
 
   it("contains an add experience button", () => {
     const experienceButton = findByTestAttr(wrapper, "experience-button");
+    expect(experienceButton).toHaveLength(1);
   });
 });
