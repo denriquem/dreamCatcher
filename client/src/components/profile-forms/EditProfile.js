@@ -40,7 +40,7 @@ export const EditProfile = ({
       twitter: loading || !profile.social ? "" : profile.social.twitter,
       facebook: loading || !profile.social ? "" : profile.social.facebook,
     });
-  }, [loading]);
+  }, [loading, getCurrentProfile]);
 
   const {
     planet,
