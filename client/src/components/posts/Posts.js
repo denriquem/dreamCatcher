@@ -2,13 +2,12 @@ import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getPosts } from "../../actions/post";
-import Spinner from "../layout";
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
   useEffect(() => {
     getPosts();
   }, [getPosts]);
-  return <div></div>;
+  return <div>Hello?</div>;
 };
 
 Posts.propTypes = {

@@ -20,9 +20,9 @@ export default function (state = initialState, action) {
     case POST_ERROR:
       return {
         ...state,
-        error: payload,
-        loading: false,
+        error: false,
       };
-      defualt: return state;
+    default:
+      return state;
   }
 }
