@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
-const ProfileAbout = ({
+export const ProfileAbout = ({
   profile: {
     bio,
     skills,

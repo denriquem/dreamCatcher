@@ -7,7 +7,7 @@ import { getProfileById } from "../../actions/profile";
 import ProfileTop from "./ProfileTop";
 import ProfileAbout from "./ProfileAbout";
 
-const Profile = ({
+export const Profile = ({
   getProfileById,
   profile: { profile, loading },
   auth,
