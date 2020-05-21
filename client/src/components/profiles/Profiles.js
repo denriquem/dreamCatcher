@@ -5,7 +5,7 @@ import ProfileItem from "./ProfileItem";
 import { connect } from "react-redux";
 import { getProfiles } from "../../actions/profile";
 
-const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
+export const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   useEffect(() => {
     getProfiles();
   }, [getProfiles]);
