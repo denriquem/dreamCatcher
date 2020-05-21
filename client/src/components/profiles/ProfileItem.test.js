@@ -1,5 +1,5 @@
 import { ProfileItem } from "./ProfileItem";
-import { setup, findByTestAttr } from "./../testHelpers";
+import { setup } from "./../testHelpers";
 
 let wrapper;
 
@@ -17,7 +17,6 @@ beforeEach(() => {
 
 describe("ProfileItem", () => {
   it("succesfully render a profile Item", () => {
-    // const ProfileItemComponent = findByTestAttr(wrapper, "profile-item");
     expect(wrapper).toHaveLength(1);
   });
 });
