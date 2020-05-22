@@ -24,7 +24,8 @@ describe("Register", () => {
   });
 
   // it("should render a sign up form", () => {
-  //   const signUpForm = findByTestAttr(wrapper, "signup-form");
+  //   wrapper.dive();
+  //   const signUpForm = wrapper.find("div.form");
   //   expect(signUpForm).toHaveLength(1);
   // });
 
