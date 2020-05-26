@@ -11,7 +11,7 @@ import {
 // Get posts
 export const getPosts = () => async (dispatch) => {
   try {
-    const res = await axios.get("/api/posts");
+    const res = await axios.get("api/posts");
 
     dispatch({
       type: GET_POSTS,
@@ -62,7 +62,7 @@ export const removeLike = (postId) => async (dispatch) => {
 // Delete Post
 export const deletePost = (postId) => async (dispatch) => {
   try {
-    const res = await axios.delete(`/api/posts/${postId}`);
+    await axios.delete(`/api/posts/${postId}`);
 
     dispatch({
       type: DELETE_POST,

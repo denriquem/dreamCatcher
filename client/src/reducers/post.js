@@ -38,7 +38,8 @@ export default function (state = initialState, action) {
     case POST_ERROR:
       return {
         ...state,
-        error: false,
+        error: payload,
+        loading: false,
       };
     case UPDATE_LIKES:
       return {
