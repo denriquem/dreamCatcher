@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { connect } from "react";
+import { connect } from "react-redux";
 import { addPost } from "../../actions/post";
 
-const PostsForm = ({ addPost }) => {
+const PostForm = ({ addPost }) => {
   const [text, setText] = useState("");
 
   return (
@@ -34,8 +34,8 @@ const PostsForm = ({ addPost }) => {
   );
 };
 
-PostsForm.propTypes = {
+PostForm.propTypes = {
   addPost: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addPost })(PostsForm);
+export default connect(null, { addPost })(PostForm);
