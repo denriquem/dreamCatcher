@@ -7,7 +7,10 @@ let wrapper;
 beforeEach(() => {
   const props = {
     getPosts: jest.fn(),
-    post: { mockObject: "mock" },
+    post: {
+      mockObject: "mock",
+      posts: ["I have lots of dreams to share", "I cannae dream"],
+    },
   };
 
   wrapper = setup(Posts, props);
