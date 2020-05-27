@@ -1,6 +1,5 @@
-import React from "react";
 import { Posts } from "./Posts";
-import { setup, findByTestAttr } from "./../testHelpers";
+import { setup } from "./../testHelpers";
 
 let wrapper;
 

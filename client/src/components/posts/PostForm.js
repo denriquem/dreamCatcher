@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addPost } from "../../actions/post";
 
-const PostForm = ({ addPost }) => {
+export const PostForm = ({ addPost }) => {
   const [text, setText] = useState("");
 
   return (

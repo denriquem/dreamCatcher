@@ -1,6 +1,5 @@
-import React from "react";
 import { PostItem } from "./PostItem";
-import { setup, findByTestAttr } from "./../testHelpers";
+import { setup } from "./../testHelpers";
 
 let wrapper;
 
