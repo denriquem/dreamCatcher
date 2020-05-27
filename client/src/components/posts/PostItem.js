@@ -5,7 +5,7 @@ import Moment from "react-moment";
 import { connect } from "react-redux";
 import { addLike, removeLike, deletePost } from "../../actions/post";
 
-const PostItem = ({
+export const PostItem = ({
   addLike,
   removeLike,
   deletePost,
