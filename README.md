@@ -1,5 +1,7 @@
 # DreamCatcher
 
+[Description](#description) | [Getting Started](#getting-started) | [How to Run Tests](#how-to-run-tests) | [Technologies Used](#technologies-used) | [Code Quality](#code-quality) | [User Stories](#user-stories)
+
 ## Description
 
 DreamCatcher allows you to discuss and share your dreams with other users. Ever wondered how your dreams compare to other people's or thought of yourself as some sort of savant clairvoyant dream interpreter? No - okay then. Are you just a regular Joe called Simon looking for a good time when it comes to publicly broadcasting your private delusions?
@@ -13,7 +15,7 @@ There's an old saying that there's nothing more boring than somone else's dreams
 - Clone this repository with
 - Install all the dependencies with `npm install`
 
-## How to Run the tests
+## How to run tests
 
 - Change into the client folder with `cd cleint`
 - Run all the tests with `npm test`
@@ -36,6 +38,8 @@ There's an old saying that there's nothing more boring than somone else's dreams
 [ESLint](https://eslint.org/): tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs.
 
 ## User Stories
+
+```
 
 As a user,
 So that I can see what is being dreamt up,
@@ -72,3 +76,5 @@ I'd like to be able to update my profile
 As a user,
 So that I can knowm more about other dreamers,
 I would like to be able to see other peoples' profiles on a profile page
+
+```
