@@ -23,7 +23,7 @@ Concurrently run the nodemon and client servers using `npm run dev`
 
 ## How To Run Tests
 
-- Change into the client folder with `cd cleint`
+- Change into the client folder with `cd client`
 - Run all the tests with `npm test`
 
 ## Technologies Used
