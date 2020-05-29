@@ -12,7 +12,7 @@ There's an old saying that there's nothing more boring than somone else's dreams
 
 ## Getting Started
 
-- Clone this repository with
+- Clone this repository with `git clone https://github.com/denriquem/dreamCatcher.git`
 - Install all the dependencies with `npm install`
 
 ## How to run tests
