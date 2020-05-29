@@ -14,7 +14,7 @@ There's an old saying that there's nothing more boring than somone else's dreams
 
 - Clone this repository with `git clone https://github.com/denriquem/dreamCatcher.git`
 - Install the backend dependencies with `npm install`
-- Change into the client folder with `cd cleint`
+- Change into the client folder with `cd client`
 - Install the client dependencies with `npm install`
 
 ## How To Run The App
