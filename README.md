@@ -1,6 +1,6 @@
 # DreamCatcher
 
-[Description](#description) | [Getting Started](#getting-started) | [How to Run Tests](#how-to-run-tests) | [Technologies Used](#technologies-used) | [Code Quality](#code-quality) | [User Stories](#user-stories)
+[Description](#description) | [Getting Started](#getting-started) | [How To Run The App](#how-to-run-the-app) [How to Run Tests](#how-to-run-tests) | [Technologies Used](#technologies-used) | [Code Quality](#code-quality) | [User Stories](#user-stories)
 
 ## Description
 
@@ -13,7 +13,13 @@ There's an old saying that there's nothing more boring than somone else's dreams
 ## Getting Started
 
 - Clone this repository with `git clone https://github.com/denriquem/dreamCatcher.git`
-- Install all the dependencies with `npm install`
+- Install the backend dependencies with `npm install`
+- Change into the client folder with `cd cleint`
+- Install the client dependencies with `npm install`
+
+## How to run the app
+
+Concurrently run the nodemon and client servers using `npm run dev`
 
 ## How to run tests
 
@@ -40,7 +46,6 @@ There's an old saying that there's nothing more boring than somone else's dreams
 ## User Stories
 
 ```
-
 As a user,
 So that I can see what is being dreamt up,
 I'd like to see a page full of dream posts
@@ -76,5 +81,4 @@ I'd like to be able to update my profile
 As a user,
 So that I can knowm more about other dreamers,
 I would like to be able to see other peoples' profiles on a profile page
-
 ```
