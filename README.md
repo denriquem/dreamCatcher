@@ -17,11 +17,11 @@ There's an old saying that there's nothing more boring than somone else's dreams
 - Change into the client folder with `cd cleint`
 - Install the client dependencies with `npm install`
 
-## How to run the app
+## How To Run The App
 
 Concurrently run the nodemon and client servers using `npm run dev`
 
-## How to run tests
+## How To Run Tests
 
 - Change into the client folder with `cd cleint`
 - Run all the tests with `npm test`
@@ -36,6 +36,7 @@ Concurrently run the nodemon and client servers using `npm run dev`
 - [JSON Web Token](https://jwt.io/introduction/): An open standard (RFC 7519) that defined a compact and self-contained way of
 
 * Testing frameworks:
+
   - [Jest](https://jestjs.io/): a JavaScript Testing Framework with a focus on simplicity.
   - [Enzyme](https://www.npmjs.com/package/enzyme): a JavaScript Testing utility for React that makes it easier to test the React Components' output.
 
