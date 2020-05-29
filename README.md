@@ -1,6 +1,6 @@
 # DreamCatcher
 
-[Description](#description) | [Getting Started](#getting-started) | [How To Run The App](#how-to-run-the-app) [How to Run Tests](#how-to-run-tests) | [Technologies Used](#technologies-used) | [Code Quality](#code-quality) | [User Stories](#user-stories)
+[Description](#description) | [Getting Started](#getting-started) | [How To Run The App](#how-to-run-the-app) | [How to Run Tests](#how-to-run-tests) | [Technologies Used](#technologies-used) | [Code Quality](#code-quality) | [User Stories](#user-stories)
 
 ## Description
 
