@@ -8,11 +8,9 @@ export const PostForm = ({ addPost }) => {
 
   return (
     <div className="post-form">
-      <div className="bg-primary p">
-        <h3>Dream Away</h3>
-      </div>
+      <p className=" bg-primary p lead">Dream Away</p>
       <form
-        className="form my-1"
+        className="form my-1 lead"
         onSubmit={(e) => {
           e.preventDefault();
           addPost({ text });
@@ -20,6 +18,7 @@ export const PostForm = ({ addPost }) => {
         }}
       >
         <textarea
+          className="form"
           name="text"
           cols="30"
           rows="5"

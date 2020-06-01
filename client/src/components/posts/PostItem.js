@@ -13,7 +13,7 @@ export const PostItem = ({
   post: { _id, text, name, avatar, user, likes, NotADream, comments, date },
   showActions,
 }) => (
-  <div className="post bg-white p-1 my-1">
+  <div className="post bg-white p-1 my-1 lead">
     <div>
       <Link to={`/profile/${user}`}>
         <img className="round-img" src={avatar} alt="" />
@@ -21,7 +21,7 @@ export const PostItem = ({
       </Link>
     </div>
     <div>
-      <p className="my-1">{text}</p>
+      <p className="lead">{text}</p>
       <p className="post-date">
         Posted on <Moment format="YYYY/MM/DD">{date}</Moment>{" "}
       </p>
