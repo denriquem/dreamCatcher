@@ -60,6 +60,7 @@ img {
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-family: "EB Garamond", serif;
 }
 
 .small {
@@ -247,10 +248,10 @@ img {
 }
 
 .form .form-text {
-  font-family: Poppins-Medium;
+  font-family: "EB Garamond", serif;
   display: block;
   margin-top: 0.3rem;
-  color: rgb(38, 209, 129);
+  color: black;
 }
 
 .form input[type="text"],
@@ -264,7 +265,6 @@ img {
   width: 100%;
   padding: 0.4rem;
   font-size: 1.2rem;
-  border: 1px rgb(38, 209, 129);
 }
 
 .form input[type="submit"],

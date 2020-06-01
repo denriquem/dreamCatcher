@@ -14,6 +14,10 @@ export const PostItem = ({
   showActions,
 }) => (
   <div className="post bg-white p-1 my-1 lead">
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Indie+Flower&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    ></link>
     <div>
       <Link to={`/profile/${user}`}>
         <img className="round-img" src={avatar} alt="" />
