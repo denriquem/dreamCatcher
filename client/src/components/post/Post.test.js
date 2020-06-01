@@ -6,9 +6,9 @@ let wrapper;
 beforeEach(() => {
   const props = {
     post: {
-      post: "mockPost",
-      loading: false,
       getPost: jest.fn(),
+      post: { text: "mockPost", comments: ["heres one", "heres another"] },
+      loading: false,
     },
   };
 
