@@ -171,6 +171,7 @@ img {
 .alert-primary {
   background: var(--primary-color);
   color: white;
+  border-radius: 40px;
 }
 
 .btn-light,
@@ -261,6 +262,7 @@ img {
 .form input[type="date"],
 .form select,
 .form textarea {
+  border-radius: 40px;
   font-family: Poppins-Medium;
   display: block;
   width: 100%;
