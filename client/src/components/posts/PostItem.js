@@ -35,7 +35,7 @@ export const PostItem = ({
           <button
             onClick={(e) => addLike(_id)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-primary"
           >
             <i className="fas fa-thumbs-up"></i>{" "}
             <span> {likes.length > 0 && <span>{likes.length}</span>}</span>
@@ -43,7 +43,7 @@ export const PostItem = ({
           <button
             onClick={(e) => removeLike(_id)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-primary"
           >
             <i className="fas fa-thumbs-down"></i>
           </button>

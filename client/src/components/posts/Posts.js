@@ -12,7 +12,7 @@ export const Posts = ({ getPosts, post: { posts } }) => {
   return (
     <Fragment>
       <h1 className="large text-primary text-center">
-        Posts
+        DreamFeed
         <p className="lead">
           <i className="fas fa-user"></i> Welcome to the community
         </p>
