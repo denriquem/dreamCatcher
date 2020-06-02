@@ -15,7 +15,8 @@ export const ProfileTop = ({
       <img className="round-img my-1" src={avatar} alt="" />
       <h1 className="large">{name}</h1>
       <p className="lead">
-        {status} {planet && <span> on {planet} </span>}
+        {status.charAt(0).toUpperCase() + status.slice(1)}{" "}
+        {planet && <span> on {planet} </span>}
       </p>
       <p>{dreamAnimal && <span>{dreamAnimal}</span>}</p>
       <div className="icons my-1">

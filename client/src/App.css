@@ -260,10 +260,18 @@ img {
 .form input[type="email"],
 .form input[type="password"],
 .form input[type="date"],
-.form select,
+.form select {
+  opacity: 0.7;
+  font-family: "Raleway", sans-serif;
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}
+
 .form textarea {
-  border-radius: 40px;
-  font-family: Poppins-Medium;
+  opacity: 0.9;
+  font-family: "Raleway", sans-serif;
   display: block;
   width: 100%;
   padding: 0.4rem;
@@ -363,6 +371,9 @@ button {
 
 /* Profiles Page */
 .profile {
+  border-radius: 40px;
+  background-color: whitesmoke;
+  opacity: 0.7;
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   align-items: center;

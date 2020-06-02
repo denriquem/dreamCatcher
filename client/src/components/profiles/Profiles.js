@@ -17,7 +17,7 @@ export const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
       ) : (
         <Fragment>
           <h1 className="large text-primary">Dreamers</h1>
-          <p className="lead">
+          <p className="text-primary">
             <i className="fab fa-connectdevelop">
               Browse and connect with dreamers
             </i>

@@ -4,25 +4,17 @@ import PropTypes from "prop-types";
 
 export const ProfileItem = ({
   profile: {
+    avatar,
     user: { _id, name },
     status,
     planet,
-    skills,
   },
 }) => {
   return (
-    <div className="profile bg-light">
+    <div className="profile lead">
       <div>
-        <h2>{name}</h2>
-        <p>{planet}</p>
-        <p>{status}</p>
-        <ul>
-          {skills.slice(0.4).map((skill, index) => (
-            <li key={index} className="text-primary">
-              <i className="fas fa-check"></i> {skill}
-            </li>
-          ))}
-        </ul>
+        <p>{name}</p> <p>{planet}</p>{" "}
+        <p>{status.charAt(0).toUpperCase() + status.slice(1)}</p>
         <Link to={`/profile/${_id}`} className="btn btn-primary">
           View Profile
         </Link>
