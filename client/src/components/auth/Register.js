@@ -40,7 +40,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
       <h1 className="large text-primary" data-test="register-component">
         Sign Up
       </h1>
-      <p className="lead">
+      <p className="lead text-primary">
         <i className="fas fa-user"></i> Create Your Account
       </p>
       <form
@@ -65,7 +65,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             value={email}
             onChange={(e) => onChange(e)}
           />
-          <small className="form-text">
+          <small className="small text-primary">
             This site uses Gravatar so if you want a profile image, use a
             Gravatar email
           </small>
@@ -97,7 +97,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
           data-test="submit"
         />
       </form>
-      <p className="my-1">
+      <p className="my-1 text-primary">
         Already have an account? <Link to="/login">Sign In</Link>
       </p>
     </Fragment>
