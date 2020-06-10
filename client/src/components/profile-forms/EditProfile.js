@@ -197,7 +197,7 @@ export const EditProfile = ({
         )}
 
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-primary my-1" to="/dashboard">
+        <Link className="btn btn-primary my-1" to="/profiles">
           Go Back
         </Link>
       </form>

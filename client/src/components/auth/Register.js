@@ -32,7 +32,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
   };
 
   if (isAuthenticated) {
-    return <Redirect to="/edit-profile" />;
+    return <Redirect to="/create-profile" />;
   }
 
   return (

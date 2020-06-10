@@ -44,7 +44,7 @@ export const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     <nav className="navbar bg-dark">
       <h1>
-        <Link to="/posts">
+        <Link to="/">
           <i className="fab fa-centos"></i> DreamCatcher
         </Link>
       </h1>

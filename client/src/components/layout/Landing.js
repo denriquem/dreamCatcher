@@ -25,7 +25,7 @@ export const Landing = ({ isAuthenticated }) => {
             <Link
               data-test="login-button"
               to="/login"
-              className="btn btn-light"
+              className="btn btn-primary"
             >
               Login
             </Link>
