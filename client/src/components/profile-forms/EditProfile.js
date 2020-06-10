@@ -59,7 +59,6 @@ export const EditProfile = ({
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
-    console.log("Breadcrumbs!");
     e.preventDefault();
     createProfile(formData, history, true);
   };

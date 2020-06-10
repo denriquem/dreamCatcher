@@ -44,11 +44,11 @@ export const CreateProfile = ({ createProfile, history }) => {
   return (
     <Fragment>
       <h1 class="large text-primary">Create Your Profile</h1>
-      <p className="lead">
+      <p className="lead text-primary">
         <i className="fas fa-user"></i> Let's get some information to make your
         profile stand out
       </p>
-      <small>* = required field</small>
+      <small className="small text-primary">* = required field</small>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
         <div className="form-group">
           <input
@@ -58,9 +58,7 @@ export const CreateProfile = ({ createProfile, history }) => {
             value={planet}
             onChange={(e) => onChange(e)}
           />
-          <small className="form-text">
-            Give us an idea what of planet you're on
-          </small>
+          <small className="form-text">What planet are you on?</small>
         </div>
         <div className="form-group">
           <input
@@ -70,9 +68,7 @@ export const CreateProfile = ({ createProfile, history }) => {
             value={dreamAnimal}
             onChange={(e) => onChange(e)}
           />
-          <small className="form-text">
-            It could be the animal of your dreams
-          </small>
+          <small className="form-text">What is your dream animal?</small>
         </div>
         <div className="form-group">
           <input
@@ -82,9 +78,7 @@ export const CreateProfile = ({ createProfile, history }) => {
             value={dreamColour}
             onChange={(e) => onChange(e)}
           />
-          <small className="form-text">
-            It could be the animal of your dreams
-          </small>
+          <small className="form-text">What is your dream colour?</small>
         </div>
         <div className="form-group">
           <input
@@ -94,7 +88,7 @@ export const CreateProfile = ({ createProfile, history }) => {
             value={dreamMusic}
             onChange={(e) => onChange(e)}
           />
-          <small className="form-text">A soundtrack for your dreams</small>
+          <small className="form-text">The soundtrack of your dreams</small>
         </div>
         <div className="form-group">
           <input
@@ -115,8 +109,8 @@ export const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className="form-text">
-            Please use comma separated values (eg. lucid dreamer, lucid snorer,
-            insomniac, night owl )
+            Please use a list with commas in between (eg. lucid dreamer, lucid
+            snorer, insomniac, night owl )
           </small>
         </div>
 
@@ -127,17 +121,19 @@ export const CreateProfile = ({ createProfile, history }) => {
             value={bio}
             onChange={(e) => onChange(e)}
           ></textarea>
-          <small className="form-text">Tell us a little about yourself</small>
+          <small className="form-text">
+            Tell us a little about yourself for a short bio
+          </small>
         </div>
         <div className="my-2">
           <button
             onClick={() => toggleSocialInputs(!displaySocialInputs)}
             type="button"
-            className="btn btn-light"
+            className="btn btn-primary"
           >
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <span className="small text-primary">Optional</span>
         </div>
 
         {displaySocialInputs && (
@@ -178,8 +174,8 @@ export const CreateProfile = ({ createProfile, history }) => {
         )}
 
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
-          Go Back
+        <Link className="btn btn-primary my-1" to="/posts">
+          To the DreamFeed
         </Link>
       </form>
     </Fragment>
