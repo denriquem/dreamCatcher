@@ -73,6 +73,7 @@ export const createProfile = (formData, history, edit = false) => async (
     };
 
     const res = await axios.post("/api/profile", formData, config);
+
     dispatch({
       type: GET_PROFILE,
       payload: res.data,
@@ -81,7 +82,7 @@ export const createProfile = (formData, history, edit = false) => async (
     dispatch(setAlert(edit ? "Profile Updated" : "Profile Created", "success"));
 
     if (!edit) {
-      history.push("/profiles");
+      history.push("/posts");
     }
   } catch (err) {
     const errors = err.response.data.errors;

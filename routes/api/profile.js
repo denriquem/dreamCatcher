@@ -65,12 +65,9 @@ router.post(
     if (dreamMusic) profileFields.dreamMusic = dreamMusic;
     if (status) profileFields.status = status;
     if (bio) profileFields.bio = bio;
-
-    profileFields = {
-      skills: Array.isArray(skills)
-        ? skills
-        : skills.split(",").map((skill) => " " + skill.trim()),
-    };
+    if (skills) {
+      profileFields.skills = skills.split(",").map((skill) => skill.trim());
+    }
 
     // Build socail object
 
@@ -78,14 +75,13 @@ router.post(
     if (youtube) profileFields.social.youtube = youtube;
     if (twitter) profileFields.social.twitter = twitter;
     if (facebook) profileFields.social.facebook = facebook;
-    // if (instagram) profileFields.social.instagram = instagram;
 
     try {
       let profile = await Profile.findOne({ user: req.user.id });
 
       if (profile) {
-        //Update
-        let profile = await Profile.findOneAndUpdate(
+        // Update
+        profile = await Profile.findOneAndUpdate(
           { user: req.user.id },
           { $set: profileFields },
           { new: true }
@@ -95,11 +91,10 @@ router.post(
       }
 
       // Create
-
       profile = new Profile(profileFields);
 
       await profile.save();
-      res.json(profile);
+      return res.json(profile);
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server Error");
